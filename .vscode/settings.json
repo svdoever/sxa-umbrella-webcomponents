@@ -1,0 +1,8 @@
+{
+    "appService.zipIgnorePattern": [
+        "node_modules{,/**}",
+        ".vscode{,/**}"
+    ],
+    "appService.defaultWebAppToDeploy": "/subscriptions/69b6f9b6-f0c3-47f6-8694-ffbbaeec9d9b/resourceGroups/sxa-umbrella-wc/providers/Microsoft.Web/sites/sxa-umbrella-wc",
+    "appService.deploySubpath": "www"
+}

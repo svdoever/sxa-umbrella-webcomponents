@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0">
+  <title>Stencil Component Starter</title>
+
+  <link rel="stylesheet" href="build/sxa-umbrella-webcomponents.css" />
+  <script type="module" src="build/sxa-umbrella-webcomponents.esm.js"></script>
+  <script nomodule src="build/sxa-umbrella-webcomponents.js"></script>
+</head>
+
+<body>
+  <div class="flex flex-wrap -mb-4">
+    <div class="w-1/3 p-4 mb-4 bg-gray-400">
+      <dmp-addresscard imgsrc="images/Dinah koffie.png" name="Dinah Hunsel" address="Noordzijde 42, 1064GV Amsterdam" email="dinahhunsel@gmail.com"
+        phonenumber="06-10013108" phonenumberislink="true"></dmp-addresscard>
+    </div>
+    <div class="w-1/3 p-4 mb-4 bg-gray-500">
+      <dmp-addresscard imgsrc="images/Serge.jpg" name="Serge van den Oever" email="svdoever@gmail.com"
+        phonenumber="06-22693426"></dmp-addresscard>
+    </div>
+    <div class="w-1/3 p-4 mb-4 bg-gray-400">
+      <dmp-addresscard phonenumber="06-22693426">
+        <p>Sample text in slot</p>
+      </dmp-addresscard>
+    </div>
+    <div class="w-1/3 p-4 mb-4 bg-gray-500">
+      <dmp-addresscard>Sample text in slot</dmp-addresscard>
+    </div>
+    
+    <div class="w-1/3 p-4 mb-4 bg-gray-400">
+      <dmp-slottedaddresscard>
+        <span slot="image"><img src="images/Trump square.jpg"/></span>
+        <span slot="name">Donald Trump</span>
+        <div slot="address">1600 Pennsylvania Avenue NW, Washington, DC 20500</div>
+        <div slot="phonenumber">+1-202-456-1111</div>
+        <div slot="email">donald.trump@whitehouse.gov</div>
+        <div slot="block">
+          <hr class="mt-4"/>
+          <i>Let's make America great again!</i>
+          <hr/>
+        </div>
+      </dmp-slottedaddresscard>
+    </div>
+  </div>
+</body>
+</html>
