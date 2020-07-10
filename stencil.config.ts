@@ -26,6 +26,9 @@ export const config: Config = {
         },
         {
           src: "*.html"
+        },
+        {
+          src: "sitemap.txt"
         }
       ],
     },
