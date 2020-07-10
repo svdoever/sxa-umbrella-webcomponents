@@ -1,0 +1,3 @@
+https://mango-river-020e4d803.azurestaticapps.net/index.html
+https://mango-river-020e4d803.azurestaticapps.net/index-attributes.html
+https://mango-river-020e4d803.azurestaticapps.net/index-slotted.html

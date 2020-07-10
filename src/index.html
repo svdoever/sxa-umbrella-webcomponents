@@ -4,11 +4,57 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0">
-  <title>Stencil tester - main entry</title>
+  <title>Stencil tester - SEO</title>
 </head>
 
 <body>
-  <div><a href="index-attributes.html">AddressCard - attributes</a></div>
-  <div><a href="index-slotted.html">AddressCard - slots</a></div>
+  <h1>The Stencil tester - SEO and web components</h1>
+  <p>
+    Welcome to the SEO checking project for web components created using <a href="" target="_blank">StencilJS</a>.
+  </p>
+  <h2>Why?</h2>
+  <p>
+    In this small web-site I want to check how search engines like Google and Bing index a website using web
+    components, and how web components should be written to provide for optimal search engine optimization.
+  </p>
+  <h2>How?</h2>
+  <p>
+    Through the use of one case, an interactive addresscard web component, I will check how search engines do their
+    indexing. The addresscard web component is written in two ways:
+  </p>
+  <ol>
+    <li><strong>Using attributes</strong> - all data is provided to the component in attributes, except for "children" data which is in a
+      slot</li>
+    <li><strong>using slots</strong> - all data that is relevant for indexing is provided to the component in slots </li>
+  </ol>
+
+  <p>
+    I created 2 pages using the above described techniques:
+  </p>
+
+  <div><a href="index-attributes.html">AddressCard - attributes</a> - with <strong>Amy Edwards</strong> and <strong>Elen
+      May</strong></div>
+
+  <div><a href="index-slotted.html">AddressCard - slots</a> - with <strong>Amy Edwards</strong> and <strong>Vanessa
+      Adams</strong></div>
+
+  <h2>The data</h2>
+  <p>
+    The data is a combination of the great <a href="https://randomuser.me/" target="_blank">Random User Generator</a>
+    service, and some hand-picking of random ocations on Google maps. I selected some random company addresses and
+    telephone numbers to make sure the address exists, and I could select the real latitude and longitude on the map. If
+    your company get's called too often I apologize!
+
+    The query that I used to get random users was:
+
+  <pre>https://randomuser.me/api/?nat=us&gender=female&results=4</pre>
+  </p>
+
+  <h3>Notes</h3>
+  <p>
+    Although StencilJS has the ability to do prerendering, it does not make sense in the case I want to test because
+    pages with their components will be constructed dynamically.
+  </p>
 </body>
+
 </html>
