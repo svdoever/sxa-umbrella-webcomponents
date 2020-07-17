@@ -1,14 +1,19 @@
 import { readFileSync } from 'fs';
 import { Config } from "@stencil/core";
+import { reactOutputTarget } from '@stencil/react-output-target';
 import { postcss } from '@stencil/postcss';
 import autoprefixer from 'autoprefixer';
 import tailwindcss from 'tailwindcss';
 
 export const config: Config = {
   namespace: "sxa-umbrella-webcomponents",
-  globalStyle: 'src/global/global.css'
+  globalStyle: 'src/global/global.css',
   taskQueue: "async",
   outputTargets: [
+    reactOutputTarget({
+      componentCorePackage: 'sxa-umbrella-webcomponents',
+      proxiesFile: './src/componentsReact/components.ts',
+    }),
     {
       type: "dist",
       esmLoaderPath: "../loader",

@@ -2,6 +2,7 @@
   "name": "sxa-umbrella-webcomponents",
   "version": "0.0.1",
   "description": "Stencil Component Starter",
+  "license": "MIT",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "es2015": "dist/esm/index.mjs",
@@ -18,24 +19,39 @@
     "start:legacy": "stencil build --dev --es5 --docs --watch --serve",
     "start": "stencil build --dev --watch --serve",
     "build": "stencil build --docs",
+    "build:react": "rollup -c",
     "test": "stencil test --spec --e2e",
     "test.watch": "stencil test --spec --e2e --watchAll",
     "generate": "stencil generate"
   },
   "devDependencies": {
+    "@rollup/plugin-commonjs": "^13.0.1",
+    "@rollup/plugin-node-resolve": "^8.4.0",
     "@stencil/core": "^1.16.0",
+    "@stencil/postcss": "^1.0.1",
+    "@stencil/react-output-target": "0.0.7",
     "@types/jest": "24.9.1",
     "@types/puppeteer": "2.0.1",
+    "@types/react": "^16.9.43",
+    "@types/react-dom": "^16.9.8",
     "autoprefixer": "^9.8.0",
     "jest": "24.9.0",
     "jest-cli": "24.9.0",
     "postcss-import": "^12.0.1",
     "postcss-loader": "^3.0.0",
     "puppeteer": "2.1.1",
-    "tailwindcss": "^1.4.6"
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "rollup": "^2.21.0",
+    "rollup-plugin-copy": "^3.3.0",
+    "rollup-plugin-peer-deps-external": "^2.2.3",
+    "rollup-plugin-typescript2": "^0.27.1",
+    "sxa-umbrella-webcomponents": "file:.",
+    "tailwindcss": "^1.4.6",
+    "typescript": "^3.9.6"
   },
-  "license": "MIT",
-  "dependencies": {
-    "@stencil/postcss": "^1.0.1"
+  "peerDependencies": {
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
   }
 }

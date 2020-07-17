@@ -21,6 +21,7 @@
     "types/jsx.d.ts"
   ],
   "exclude": [
+    "src/componentsReact",
     "node_modules"
   ]
 }

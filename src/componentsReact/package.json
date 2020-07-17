@@ -1,0 +1,17 @@
+{
+    "name": "sxa-umbrella-components",
+    "version": "1.0.0",
+    "description": "SXA Umbrella Components",
+    "main": "index.js",
+    "module": "index.esm.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [
+      "SXA",
+      "TypeScript"
+    ],
+    "author": "Serge van den Oever",
+    "license": "MIT"
+  }
+  
