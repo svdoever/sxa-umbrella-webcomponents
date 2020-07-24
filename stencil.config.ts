@@ -17,8 +17,11 @@ export const config: Config = {
     },
     {
       type: "dist",
-      buildDir: "../samples/sample-react/public/webcomponents",
-      esmLoaderPath: "loader"
+      buildDir: "../samples/sample-react/public/webcomponents"
+    },
+    {
+      type: "dist",
+      buildDir: "../samples/sample-vue/public/webcomponents"
     },
     {
       type: "docs-readme",
