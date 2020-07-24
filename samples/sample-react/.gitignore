@@ -10,6 +10,7 @@
 
 # production
 /build
+/public/webcomponents/
 
 # misc
 .DS_Store

@@ -12,8 +12,7 @@
   "collection:main": "dist/collection/index.js",
   "unpkg": "dist/sxa-umbrella-webcomponents/sxa-umbrella-webcomponents.js",
   "files": [
-    "dist/",
-    "loader/"
+    "dist/"
   ],
   "scripts": {
     "start:legacy": "stencil build --dev --es5 --docs --watch --serve",
@@ -53,7 +52,8 @@
     "rollup-plugin-typescript2": "^0.27.1",
     "sxa-umbrella-webcomponents": "file:.",
     "tailwindcss": "^1.4.6",
-    "typescript": "^3.9.6"
+    "typescript": "^3.9.6",
+    "webpack": "4.42.0"
   },
   "peerDependencies": {
     "react": "^16.13.1",

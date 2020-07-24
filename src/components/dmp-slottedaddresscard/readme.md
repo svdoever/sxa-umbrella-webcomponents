@@ -7,9 +7,11 @@
 
 ## Properties
 
-| Property            | Attribute           | Description                                         | Type      | Default |
-| ------------------- | ------------------- | --------------------------------------------------- | --------- | ------- |
-| `phonenumberislink` | `phonenumberislink` | Make the phonenumber a link for dialing out if true | `boolean` | `false` |
+| Property            | Attribute           | Description                                         | Type      | Default     |
+| ------------------- | ------------------- | --------------------------------------------------- | --------- | ----------- |
+| `lat`               | `lat`               |                                                     | `string`  | `undefined` |
+| `lon`               | `lon`               |                                                     | `string`  | `undefined` |
+| `phonenumberislink` | `phonenumberislink` | Make the phonenumber a link for dialing out if true | `boolean` | `false`     |
 
 
 ----------------------------------------------

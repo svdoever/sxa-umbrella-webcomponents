@@ -1,26 +1,30 @@
 import React from 'react';
-import logo from './logo.svg';
+// @ts-ignore
+import wrapCustomElement from '@shoelace-style/react-wrapper';
 import './App.css';
-import { DmpAddresscard } from 'sxa-umbrella-components';
+
+const DmpAddresscard = wrapCustomElement('dmp-addresscard');
 
 function App() {
   return (
     <div className="App">
-      {/* <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header> */}
-      <DmpAddresscard name="Serge van den Oever"/>
+    
+      {/* With react bindings */}
+      <DmpAddresscard name="Erwin Smit"/>
+
+      {/* 
+      Without react bindings (good old html)
+      // @ts-ignore */}
+      <dmp-addresscard name="Amy Edwards"
+        address="1212 Omaha Dr, Montgomery, AL 36105, United States" lat="32.1479602" lon="-85.0162703"
+        email="amy.edwards@example.com" phonenumber="+1 334-280-0960" phonenumberislink="true">
+        <hr className="mt-4" />
+        <strong>"The greatest glory in living lies not in never falling, but in rising every time we fall."</strong>
+        <em>-Nelson Mandela</em>
+        <hr />
+        {/* 
+      // @ts-ignore */}
+      </dmp-addresscard>
     </div>
   );
 }
