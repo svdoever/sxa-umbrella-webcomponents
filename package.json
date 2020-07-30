@@ -23,12 +23,30 @@
     "start:legacy": "stencil build --dev --es5 --docs --watch --serve",
     "start": "stencil build --dev --watch --serve",
     "build": "stencil build --docs",
-    "build:react": "rollup -c",
     "test": "stencil test --spec --e2e",
     "test.watch": "stencil test --spec --e2e --watchAll",
     "generate": "stencil generate",
-    "storybook": "start-storybook -s ./dist -p 6006",
-    "build-storybook": "build-storybook"
+    "storybook": "start-storybook -s ./www -p 6006",
+    
+    "build:all": "npm run build && npm run build:react && npm run build:vue && npm run build:storybook",
+    
+    "--- Build storybook output to www/storybook": "",
+    "build:storybook": "build-storybook -c .storybook -o www/storybook",
+
+    "--- Build and copy sample-react build output to www/react": "",
+    "build:react": "npm run build:sample:react && npm run copytowww:react",
+    "build:sample:react": "cd samples && cd sample-react && npm run build && cd .. && cd ..",
+    "copytowww:react": "copyfiles \"samples/sample-react/build/**/*\" www/react --up 3",
+
+    "--- Build and copy sample-vue build output to www/vue": "",
+    "build:vue": "npm run build:sample:vue && npm run copytowww:vue",
+    "build:sample:vue": "cd samples && cd sample-vue && npm run build && cd .. && cd ..",
+    "copytowww:vue": "copyfiles \"samples/sample-vue/dist/**/*\" www/vue --up 3",
+
+    "--- Ensure installation of react and vue samples": "",
+    "postinstall": "npm run install:react && npm run install:vue",
+    "install:react": "cd samples && cd sample-react && npm install && cd .. && cd ..",
+    "install:vue": "cd samples && cd sample-vue && npm install && cd .. && cd .."
   },
   "devDependencies": {
     "@babel/core": "^7.10.5",
@@ -44,6 +62,8 @@
     "@types/react-dom": "^16.9.8",
     "autoprefixer": "^9.8.0",
     "babel-loader": "^8.1.0",
+    "copyfiles": "^2.3.0",
+    "cpy": "^8.1.0",
     "jest": "24.9.0",
     "jest-cli": "24.9.0",
     "postcss-import": "^12.0.1",
