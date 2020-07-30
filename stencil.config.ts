@@ -10,13 +10,18 @@ export const config: Config = {
   globalStyle: 'src/global/global.css',
   taskQueue: "async",
   outputTargets: [
-    reactOutputTarget({
-      componentCorePackage: 'sxa-umbrella-webcomponents',
-      proxiesFile: './src/componentsReact/components.ts',
-    }),
+   
     {
       type: "dist",
-      esmLoaderPath: "../loader",
+      esmLoaderPath: "loader",
+    },
+    {
+      type: "dist",
+      buildDir: "../samples/sample-react/public/webcomponents"
+    },
+    {
+      type: "dist",
+      buildDir: "../samples/sample-vue/public/webcomponents"
     },
     {
       type: "docs-readme",

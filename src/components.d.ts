@@ -33,6 +33,8 @@ export namespace Components {
         "phonenumberislink": boolean;
     }
     interface DmpSlottedaddresscard {
+        "lat": string;
+        "lon": string;
         /**
           * Make the phonenumber a link for dialing out if true
          */
@@ -106,6 +108,8 @@ declare namespace LocalJSX {
         "phonenumberislink"?: boolean;
     }
     interface DmpSlottedaddresscard {
+        "lat"?: string;
+        "lon"?: string;
         /**
           * Make the phonenumber a link for dialing out if true
          */

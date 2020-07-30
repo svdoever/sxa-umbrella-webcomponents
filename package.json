@@ -13,8 +13,7 @@
   "collection:main": "dist/collection/index.js",
   "unpkg": "dist/sxa-umbrella-webcomponents/sxa-umbrella-webcomponents.js",
   "files": [
-    "dist/",
-    "loader/"
+    "dist/"
   ],
   "scripts": {
     "start:legacy": "stencil build --dev --es5 --docs --watch --serve",
@@ -23,19 +22,24 @@
     "build:react": "rollup -c",
     "test": "stencil test --spec --e2e",
     "test.watch": "stencil test --spec --e2e --watchAll",
-    "generate": "stencil generate"
+    "generate": "stencil generate",
+    "storybook": "start-storybook -s ./dist -p 6006",
+    "build-storybook": "build-storybook"
   },
   "devDependencies": {
+    "@babel/core": "^7.10.5",
     "@rollup/plugin-commonjs": "^13.0.1",
     "@rollup/plugin-node-resolve": "^8.4.0",
     "@stencil/core": "^1.16.0",
     "@stencil/postcss": "^1.0.1",
     "@stencil/react-output-target": "0.0.7",
+    "@storybook/html": "^5.3.19",
     "@types/jest": "24.9.1",
     "@types/puppeteer": "2.0.1",
     "@types/react": "^16.9.43",
     "@types/react-dom": "^16.9.8",
     "autoprefixer": "^9.8.0",
+    "babel-loader": "^8.1.0",
     "jest": "24.9.0",
     "jest-cli": "24.9.0",
     "postcss-import": "^12.0.1",
@@ -49,10 +53,15 @@
     "rollup-plugin-typescript2": "^0.27.1",
     "sxa-umbrella-webcomponents": "file:.",
     "tailwindcss": "^1.4.6",
-    "typescript": "^3.9.6"
+    "typescript": "^3.9.6",
+    "webpack": "4.42.0"
   },
   "peerDependencies": {
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
+  },
+  "dependencies": {
+    "@storybook/addon-knobs": "^5.3.19",
+    "@storybook/addon-notes": "^5.3.19"
   }
 }
