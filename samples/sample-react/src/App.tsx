@@ -12,11 +12,10 @@ function App() {
       {/* With react bindings */}
       <DmpAddresscard name="Erwin Smit"/>
 
-      {/* 
-      Without react bindings (good old html)
-      // @ts-ignore */}
+      {/* Without react bindings (good old html) */}
        <dmp-slottedaddresscard phonenumberislink="true" lat="32.1479602" lon="-85.0162703">
-          <span slot="name">Amy Edwards</span>
+          <div slot="image"><img src="images/Amy Edwards.jpg" alt="Amy Edwards"/></div>
+          <div slot="name">Amy Edwards</div>
           <div slot="address">1212 Omaha Dr, Montgomery, AL 36105, United States</div>
           <div slot="phonenumber">+1 334-280-0960</div>
           <div slot="email">amy.edwards@example.com</div>
@@ -26,7 +25,19 @@ function App() {
             <em>-Nelson Mandela</em>
             <hr />
           </div>
-        {/* @ts-ignore */}
+        </dmp-slottedaddresscard>
+        <dmp-slottedaddresscard phonenumberislink="true" lat="32.923308" lon="-96.892596">
+          <div slot="image"><img src="images/Ellen May.jpg" alt="Ellen May"/></div>
+          <div slot="name">Ellen May</div>
+          <div slot="address">2610 Valley View Ln, Farmers Branch, TX 75234, United States</div>
+          <div slot="phonenumber">+1 972-919-2620</div>
+          <div slot="email">ellen.may@example.com</div>
+          <div slot="block">
+            <hr className="mt-4" />
+            <strong>"The way to get started is to quit talking and begin doing."</strong>
+            <em>-Walt Disney</em>
+            <hr />
+          </div>
         </dmp-slottedaddresscard>
     </div>
   );
