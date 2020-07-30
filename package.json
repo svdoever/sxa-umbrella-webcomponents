@@ -1,7 +1,8 @@
 {
   "name": "sxa-umbrella-webcomponents",
   "version": "0.0.1",
-  "description": "Stencil Component Starter",
+  "description": "SXA Umbrella web components",
+  "keywords": ["Sitecore", "SXA", "WebComponents"],
   "license": "MIT",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
