@@ -27,22 +27,17 @@
     "test.watch": "stencil test --spec --e2e --watchAll",
     "generate": "stencil generate",
     "storybook": "start-storybook -c .storybook -s dist,www/images -p 6006",
-    
     "build:all": "npm run build && npm run build:react && npm run build:vue && npm run build:storybook",
-    
     "--- Build storybook output to www/storybook": "",
     "build:storybook": "build-storybook -c .storybook-build -s dist,www/images -o www/storybook",
-
     "--- Build and copy sample-react build output to www/react": "",
     "build:react": "npm run install:react && npm run build:sample:react && npm run copytowww:react",
     "build:sample:react": "cd samples && cd sample-react && npm run build && cd .. && cd ..",
     "copytowww:react": "copyfiles \"samples/sample-react/build/**/*\" www/react --up 3",
-
     "--- Build and copy sample-vue build output to www/vue": "",
     "build:vue": "npm run install:vue && npm run build:sample:vue && npm run copytowww:vue",
     "build:sample:vue": "cd samples && cd sample-vue && npm run build && cd .. && cd ..",
     "copytowww:vue": "copyfiles \"samples/sample-vue/dist/**/*\" www/vue --up 3",
-
     "--- Ensure installation of react and vue samples": "",
     "ignore--postinstall": "pwd && ls -als && npm run install:react && npm run install:vue",
     "install:react": "cd samples && cd sample-react && npm install && cd .. && cd ..",
