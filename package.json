@@ -26,12 +26,12 @@
     "test": "stencil test --spec --e2e",
     "test.watch": "stencil test --spec --e2e --watchAll",
     "generate": "stencil generate",
-    "storybook": "start-storybook -s ./www -p 6006",
+    "storybook": "start-storybook -c .storybook -s dist,www/images -p 6006",
     
     "build:all": "npm run build && npm run build:react && npm run build:vue && npm run build:storybook",
     
     "--- Build storybook output to www/storybook": "",
-    "build:storybook": "build-storybook -c .storybook -o www/storybook",
+    "build:storybook": "build-storybook -c .storybook-build -s dist,www/images -o www/storybook",
 
     "--- Build and copy sample-react build output to www/react": "",
     "build:react": "npm run build:sample:react && npm run copytowww:react",

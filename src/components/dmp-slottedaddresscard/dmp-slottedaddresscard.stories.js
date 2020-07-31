@@ -11,7 +11,7 @@ export default {
 
 export const Default = () => `
   <dmp-slottedaddresscard phonenumberislink="true" lat="${text('lat', "32.1479602")}" lon="${text('lon', "-85.0162703")}">
-    <span slot="image"><img src="images/Amy Edwards.jpg" /></span>
+    <span slot="image"><img src="Amy Edwards.jpg" /></span>
     <span slot="name">Amy Edwards</span>
     <div slot="address">1212 Omaha Dr, Montgomery, AL 36105, United States</div>
     <div slot="phonenumber">+1 334-280-0960</div>
