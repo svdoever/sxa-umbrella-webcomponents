@@ -44,7 +44,7 @@
     "copytowww:vue": "copyfiles \"samples/sample-vue/dist/**/*\" www/vue --up 3",
 
     "--- Ensure installation of react and vue samples": "",
-    "postinstall": "pwd && ls -als && npm run install:react && npm run install:vue",
+    "postinstall": "pwd && ls -als && cd .. && ls -als && npm run install:react && npm run install:vue",
     "install:react": "cd samples && cd sample-react && npm install && cd .. && cd ..",
     "install:vue": "cd samples && cd sample-vue && npm install && cd .. && cd .."
   },
