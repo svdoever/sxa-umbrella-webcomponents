@@ -4,7 +4,7 @@ import readme from './readme.md';
 export default {
   title: 'Slotted Address card',
   parameters: {
-    markdown: readme,
+    notes: { readme },
   },
   decorators: [withKnobs]
 };
@@ -30,3 +30,10 @@ export const NameOnly = () => `
     <div slot="name">Amy Edwards</div>
   </dmp-slottedaddresscard>
 `;
+
+export const NameWithLatLon = () => `
+  <dmp-slottedaddresscard lat="${text('lat', "32.1479602")}" lon="${text('lon', "-85.0162703")}">
+    <div slot="name">Amy Edwards</div>
+  </dmp-slottedaddresscard>
+`;
+
