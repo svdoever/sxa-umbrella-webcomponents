@@ -20,6 +20,14 @@ export namespace Components {
          */
         "imgsrc": string;
         /**
+          * Optional: Lattitude of the location
+         */
+        "lat": string;
+        /**
+          * Optional: Longitude of the location
+         */
+        "lon": string;
+        /**
           * Optional. Full name of the subject
          */
         "name": string;
@@ -28,7 +36,7 @@ export namespace Components {
          */
         "phonenumber": string;
         /**
-          * Make the phonenumber a link for dialing out if true
+          * Optional: Make the phonenumber a link for dialing out if true
          */
         "phonenumberislink": boolean;
     }
@@ -95,6 +103,14 @@ declare namespace LocalJSX {
          */
         "imgsrc"?: string;
         /**
+          * Optional: Lattitude of the location
+         */
+        "lat"?: string;
+        /**
+          * Optional: Longitude of the location
+         */
+        "lon"?: string;
+        /**
           * Optional. Full name of the subject
          */
         "name"?: string;
@@ -103,7 +119,7 @@ declare namespace LocalJSX {
          */
         "phonenumber"?: string;
         /**
-          * Make the phonenumber a link for dialing out if true
+          * Optional: Make the phonenumber a link for dialing out if true
          */
         "phonenumberislink"?: boolean;
     }

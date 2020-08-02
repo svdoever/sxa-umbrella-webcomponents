@@ -2,17 +2,17 @@ import { withKnobs, text } from '@storybook/addon-knobs';
 import readme from './readme.md';
 
 export default {
-  title: 'Address card',
+  title: 'Slotted Address card',
   parameters: {
     markdown: readme,
   },
   decorators: [withKnobs]
 };
 
-export const Default = () => `
+export const Full = () => `
   <dmp-slottedaddresscard phonenumberislink="true" lat="${text('lat', "32.1479602")}" lon="${text('lon', "-85.0162703")}">
-    <span slot="image"><img src="Amy Edwards.jpg" /></span>
-    <span slot="name">Amy Edwards</span>
+    <div slot="image"><img src="Amy Edwards.jpg" /></div>
+    <div slot="name">Amy Edwards</div>
     <div slot="address">1212 Omaha Dr, Montgomery, AL 36105, United States</div>
     <div slot="phonenumber">+1 334-280-0960</div>
     <div slot="email">amy.edwards@example.com</div>
@@ -22,5 +22,11 @@ export const Default = () => `
       <em>-Nelson Mandela</em>
       <hr />
     </div>
+  </dmp-slottedaddresscard>
+`;
+
+export const NameOnly = () => `
+  <dmp-slottedaddresscard>
+    <div slot="name">Amy Edwards</div>
   </dmp-slottedaddresscard>
 `;
