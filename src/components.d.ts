@@ -41,12 +41,22 @@ export namespace Components {
         "phonenumberislink": boolean;
     }
     interface DmpSlottedaddresscard {
+        /**
+          * Optional: Make the address a link for openin new window in Google maps if true
+         */
+        "addressIslink": boolean;
+        /**
+          * Optional: Lattitude of the location
+         */
         "lat": string;
+        /**
+          * Optional: Longitude of the location
+         */
         "lon": string;
         /**
-          * Make the phonenumber a link for dialing out if true
+          * Optional: Make the phonenumber a link for dialing out if true
          */
-        "phonenumberislink": boolean;
+        "phonenumberIslink": boolean;
     }
     interface MyComponent {
         /**
@@ -124,12 +134,22 @@ declare namespace LocalJSX {
         "phonenumberislink"?: boolean;
     }
     interface DmpSlottedaddresscard {
+        /**
+          * Optional: Make the address a link for openin new window in Google maps if true
+         */
+        "addressIslink"?: boolean;
+        /**
+          * Optional: Lattitude of the location
+         */
         "lat"?: string;
+        /**
+          * Optional: Longitude of the location
+         */
         "lon"?: string;
         /**
-          * Make the phonenumber a link for dialing out if true
+          * Optional: Make the phonenumber a link for dialing out if true
          */
-        "phonenumberislink"?: boolean;
+        "phonenumberIslink"?: boolean;
     }
     interface MyComponent {
         /**

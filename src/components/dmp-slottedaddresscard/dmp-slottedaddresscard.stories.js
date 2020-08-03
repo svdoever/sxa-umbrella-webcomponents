@@ -10,7 +10,7 @@ export default {
 };
 
 export const Full = () => `
-  <dmp-slottedaddresscard phonenumberislink="true" lat="${text('lat', "32.1479602")}" lon="${text('lon', "-85.0162703")}">
+  <dmp-slottedaddresscard phonenumberIslink={true} lat="${text('lat', "32.1479602")}" lon="${text('lon', "-85.0162703")}">
     <div slot="image"><img src="Amy Edwards.jpg" /></div>
     <div slot="name">Amy Edwards</div>
     <div slot="address">1212 Omaha Dr, Montgomery, AL 36105, United States</div>
@@ -31,9 +31,17 @@ export const NameOnly = () => `
   </dmp-slottedaddresscard>
 `;
 
-export const NameWithLatLon = () => `
+export const NameWithLocation = () => `
   <dmp-slottedaddresscard lat="${text('lat', "32.1479602")}" lon="${text('lon', "-85.0162703")}">
     <div slot="name">Amy Edwards</div>
   </dmp-slottedaddresscard>
 `;
+
+export const AddressIsLink = () => `
+  <dmp-slottedaddresscard addressIsLink="true" lat="${text('lat', "32.1479602")}" lon="${text('lon', "-85.0162703")}">
+    <div slot="name">Amy Edwards</div>
+    <div slot="address">1212 Omaha Dr, Montgomery, AL 36105, United States</div>
+  </dmp-slottedaddresscard>
+`;
+
 

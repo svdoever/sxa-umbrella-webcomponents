@@ -80,6 +80,7 @@
     "react-dom": "^16.13.1"
   },
   "dependencies": {
+    "@open-wc/demoing-storybook": "^2.3.14",
     "@storybook/addon-knobs": "^5.3.19",
     "@storybook/addon-notes": "^5.3.19"
   }

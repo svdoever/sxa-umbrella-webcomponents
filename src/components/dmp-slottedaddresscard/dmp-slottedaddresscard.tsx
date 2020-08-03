@@ -7,9 +7,13 @@ import { HTMLStencilElement } from "@stencil/core/internal";
   shadow: false,
 })
 export class DmpSlottedaddresscard implements ComponentInterface {
-  /** Make the phonenumber a link for dialing out if true */
-  @Prop() phonenumberislink: boolean = false;
+  /** Optional: Make the phonenumber a link for dialing out if true */
+  @Prop() phonenumberIslink: boolean;
+  /** Optional: Make the address a link for openin new window in Google maps if true */
+  @Prop() addressIslink: boolean;
+  /** Optional: Lattitude of the location */
   @Prop() lat: string;
+  /** Optional: Longitude of the location */
   @Prop() lon: string;
 
   imgDivElement!: HTMLDivElement;
@@ -20,13 +24,21 @@ export class DmpSlottedaddresscard implements ComponentInterface {
 
   hasImage: boolean;
 
+  
+  componentWillLoad() {
+    this.hasImage = !!this.hostElement.querySelector('[slot="image"]');
+  }
+
   private handleLocationClick = () => {
     this.showLocation = !this.showLocation;
     console.log("test123", this.showLocation);
   };
 
-  componentWillLoad() {
-    this.hasImage = !!this.hostElement.querySelector('[slot="image"]');
+  private handleAddressClick = () => {
+    let address = (this.hostElement.querySelector('[slot="address"]') as HTMLElement)?.innerHTML;
+    if (address) {
+      window.open(`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(address)}`, '_blank');
+    }
   }
 
   render() {
@@ -42,13 +54,19 @@ export class DmpSlottedaddresscard implements ComponentInterface {
                 <h2 class="text-2xl">
                   <slot name="name" />
                 </h2>
-                <div class="text-purple-500">
+                {this.addressIslink ? (
+                  <div class="text-purple-500 cursor-pointer underline" onClick={this.handleAddressClick}>
+                    <slot name="address" />
+                  </div>
+                ) : (
+                  <div class="text-red-500">
                   <slot name="address" />
                 </div>
+                )}
                 <div class="text-gray-600">
                   <slot name="email" />
                 </div>
-                {this.phonenumberislink ? (
+                {this.phonenumberIslink ? (
                   <a href="tel:{this.phonenumber}">
                     <div class="text-gray-600 underline">
                       <slot name="phonenumber" />
