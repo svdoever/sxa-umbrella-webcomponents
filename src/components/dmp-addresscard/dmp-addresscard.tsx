@@ -1,5 +1,5 @@
-import { Component, ComponentInterface, Host, h, State } from "@stencil/core";
-import { Prop } from "@stencil/core";
+import { Prop, Element, Component, ComponentInterface, Host, h, State } from "@stencil/core";
+import { HTMLStencilElement } from "@stencil/core/internal";
 
 @Component({
   tag: "dmp-addresscard",
@@ -20,18 +20,28 @@ export class DmpAddresscard implements ComponentInterface {
   /** Optional. Phonenumber of the subject */
   @Prop() phonenumber: string;
   /** Optional: Make the phonenumber a link for dialing out if true */
-  @Prop() phonenumberislink: boolean = false;
-  /** Optional: Lattitude of the location */
+  @Prop({attribute: 'phonenumberislink'}) phonenumberIslink: boolean;
+  /** Optional: Make the address a link for openin new window in Google maps if true */
+  @Prop({attribute: 'addressislink'}) addressIslink: boolean;
   @Prop() lat: string;
   /** Optional: Longitude of the location */
   @Prop() lon: string;
 
   @State() showLocation: boolean = false;
 
+  @Element() hostElement: HTMLStencilElement;
+
   private handleLocationClick = () => {
     this.showLocation = !this.showLocation;
     console.log("test123", this.showLocation);
   };
+
+  private handleAddressClick = () => {
+    let address = (this.hostElement.querySelector('[slot="address"]') as HTMLElement)?.innerHTML;
+    if (address) {
+      window.open(`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(address)}`, '_blank');
+    }
+  }
 
   render() {
     return (
@@ -49,13 +59,21 @@ export class DmpAddresscard implements ComponentInterface {
               <div class="text-center md:text-left">
                 {this.name ? <h2 class="text-2xl">{this.name}</h2> : null}
                 {this.address ? (
-                  <div class="text-purple-500">{this.address}</div>
+                  this.addressIslink ? (
+                    <div class="text-purple-500 cursor-pointer underline" onClick={this.handleAddressClick}>
+                      {this.address}
+                    </div>
+                  ) : (
+                    <div class="text-red-500">
+                      {this.address}
+                    </div>
+                  )
                 ) : null}
                 {this.email ? (
                   <div class="text-gray-600">{this.email}</div>
                 ) : null}
                 {this.phonenumber ? (
-                  this.phonenumberislink ? (
+                  this.phonenumberIslink ? (
                     <a href="tel:{this.phonenumber}">
                       <div class="text-gray-600 underline">{this.phonenumber}</div>
                     </a>

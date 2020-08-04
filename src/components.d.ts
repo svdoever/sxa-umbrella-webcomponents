@@ -12,6 +12,10 @@ export namespace Components {
          */
         "address": string;
         /**
+          * Optional: Make the address a link for openin new window in Google maps if true
+         */
+        "addressIslink": boolean;
+        /**
           * Optional. E-mail address of the subject
          */
         "email": string;
@@ -19,9 +23,6 @@ export namespace Components {
           * Optional. (Relative) url to the image to show on the card
          */
         "imgsrc": string;
-        /**
-          * Optional: Lattitude of the location
-         */
         "lat": string;
         /**
           * Optional: Longitude of the location
@@ -38,7 +39,7 @@ export namespace Components {
         /**
           * Optional: Make the phonenumber a link for dialing out if true
          */
-        "phonenumberislink": boolean;
+        "phonenumberIslink": boolean;
     }
     interface DmpSlottedaddresscard {
         /**
@@ -105,6 +106,10 @@ declare namespace LocalJSX {
          */
         "address"?: string;
         /**
+          * Optional: Make the address a link for openin new window in Google maps if true
+         */
+        "addressIslink"?: boolean;
+        /**
           * Optional. E-mail address of the subject
          */
         "email"?: string;
@@ -112,9 +117,6 @@ declare namespace LocalJSX {
           * Optional. (Relative) url to the image to show on the card
          */
         "imgsrc"?: string;
-        /**
-          * Optional: Lattitude of the location
-         */
         "lat"?: string;
         /**
           * Optional: Longitude of the location
@@ -131,7 +133,7 @@ declare namespace LocalJSX {
         /**
           * Optional: Make the phonenumber a link for dialing out if true
          */
-        "phonenumberislink"?: boolean;
+        "phonenumberIslink"?: boolean;
     }
     interface DmpSlottedaddresscard {
         /**

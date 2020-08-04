@@ -1,16 +1,15 @@
-import { Element, Component, ComponentInterface, Host, h, State } from "@stencil/core";
-import { Prop } from "@stencil/core";
-import { HTMLStencilElement } from "@stencil/core/internal";
+import { Prop, Element, Component, ComponentInterface, Host, h, State } from '@stencil/core';
+import { HTMLStencilElement } from '@stencil/core/internal';
 
 @Component({
-  tag: "dmp-slottedaddresscard",
-  shadow: false,
+  tag: 'dmp-slottedaddresscard',
+  shadow: false
 })
 export class DmpSlottedaddresscard implements ComponentInterface {
   /** Optional: Make the phonenumber a link for dialing out if true */
-  @Prop() phonenumberIslink: boolean;
+  @Prop({ attribute: 'phonenumberislink' }) phonenumberIslink: boolean;
   /** Optional: Make the address a link for openin new window in Google maps if true */
-  @Prop() addressIslink: boolean;
+  @Prop({ attribute: 'addressislink' }) addressIslink: boolean;
   /** Optional: Lattitude of the location */
   @Prop() lat: string;
   /** Optional: Longitude of the location */
@@ -24,14 +23,13 @@ export class DmpSlottedaddresscard implements ComponentInterface {
 
   hasImage: boolean;
 
-  
   componentWillLoad() {
     this.hasImage = !!this.hostElement.querySelector('[slot="image"]');
   }
 
   private handleLocationClick = () => {
     this.showLocation = !this.showLocation;
-    console.log("test123", this.showLocation);
+    console.log('test123', this.showLocation);
   };
 
   private handleAddressClick = () => {
@@ -39,15 +37,19 @@ export class DmpSlottedaddresscard implements ComponentInterface {
     if (address) {
       window.open(`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(address)}`, '_blank');
     }
-  }
+  };
 
   render() {
     return (
       <Host>
         <div class="block bg-white rounded-lg shadow-xl p-6 overflow-hidden m-2">
-          <div class={this.showLocation ? "hidden" : ""}>
+          <div class={this.showLocation ? 'hidden' : ''}>
             <div class="md:flex">
-              <div ref={el => this.imgDivElement = el as HTMLDivElement} hidden={!this.hasImage} class="h-16 w-16 md:h-24 md:w-24 rounded-full mx-auto md:mx-0 md:mr-6 overflow-hidden">
+              <div
+                ref={el => (this.imgDivElement = el as HTMLDivElement)}
+                hidden={!this.hasImage}
+                class="h-16 w-16 md:h-24 md:w-24 rounded-full mx-auto md:mx-0 md:mr-6 overflow-hidden"
+              >
                 <slot name="image" />
               </div>
               <div class="text-center md:text-left">
@@ -60,8 +62,8 @@ export class DmpSlottedaddresscard implements ComponentInterface {
                   </div>
                 ) : (
                   <div class="text-red-500">
-                  <slot name="address" />
-                </div>
+                    <slot name="address" />
+                  </div>
                 )}
                 <div class="text-gray-600">
                   <slot name="email" />

@@ -3,7 +3,7 @@
     
     <div class="flex flex-wrap -mb-4">
       <div class="w-1/2 p-4 mb-4 bg-gray-400">
-        <dmp-slottedaddresscard phonenumberislink="true" lat="32.1479602" lon="-85.0162703">
+        <dmp-slottedaddresscard phonenumberislink="true" addressislink="true" lat="32.1479602" lon="-85.0162703">
           <div slot="image"><img src="images/Amy Edwards.jpg" /></div>
           <div slot="name">Amy Edwards</div>
           <div slot="address">1212 Omaha Dr, Montgomery, AL 36105, United States</div>
@@ -18,7 +18,7 @@
         </dmp-slottedaddresscard>
       </div>
       <div class="w-1/2 p-4 mb-4 bg-gray-400">
-        <dmp-slottedaddresscard phonenumberislink="true" lat="32.923308" lon="-96.892596">
+        <dmp-slottedaddresscard phonenumberislink="true" addressislink="true" lat="32.923308" lon="-96.892596">
           <div slot="image"><img src="images/Ellen May.jpg" /></div>
           <div slot="name">Ellen May</div>
           <div slot="address">2610 Valley View Ln, Farmers Branch, TX 75234, United States</div>

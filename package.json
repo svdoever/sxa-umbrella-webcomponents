@@ -26,7 +26,7 @@
     "test": "stencil test --spec --e2e",
     "test.watch": "stencil test --spec --e2e --watchAll",
     "generate": "stencil generate",
-    "storybook": "start-storybook -c .storybook -s dist,www/images -p 6006",
+    "storybook": "concurrently --kill-others --names startstencil,storybook \"npm run start\" \"start-storybook -c .storybook -s dist,www/images -p 6006\"",
     "build:all": "npm run build && npm run build:react && npm run build:vue && npm run build:storybook",
     "--- Build storybook output to www/storybook": "",
     "build:storybook": "build-storybook -c .storybook-build -s dist,www/images -o www/storybook",
@@ -51,16 +51,19 @@
     "@stencil/postcss": "^1.0.1",
     "@stencil/react-output-target": "0.0.7",
     "@storybook/html": "^5.3.19",
+    "@storybook/web-components": "^5.3.19",
     "@types/jest": "24.9.1",
     "@types/puppeteer": "2.0.1",
     "@types/react": "^16.9.43",
     "@types/react-dom": "^16.9.8",
     "autoprefixer": "^9.8.0",
     "babel-loader": "^8.1.0",
+    "concurrently": "^5.2.0",
     "copyfiles": "^2.3.0",
     "cpy": "^8.1.0",
     "jest": "24.9.0",
     "jest-cli": "24.9.0",
+    "lit-html": "^1.2.1",
     "postcss-import": "^12.0.1",
     "postcss-loader": "^3.0.0",
     "puppeteer": "2.1.1",
@@ -73,15 +76,12 @@
     "sxa-umbrella-webcomponents": "file:.",
     "tailwindcss": "^1.4.6",
     "typescript": "^3.9.6",
-    "webpack": "4.42.0"
+    "webpack": "4.42.0",
+    "@storybook/addon-knobs": "^5.3.19",
+    "@storybook/addon-notes": "^5.3.19"
   },
   "peerDependencies": {
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
-  },
-  "dependencies": {
-    "@open-wc/demoing-storybook": "^2.3.14",
-    "@storybook/addon-knobs": "^5.3.19",
-    "@storybook/addon-notes": "^5.3.19"
   }
 }

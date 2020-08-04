@@ -1,4 +1,5 @@
 import { withKnobs, text } from '@storybook/addon-knobs';
+import { html } from 'lit-html';
 import readme from './readme.md';
 
 export default {
@@ -9,8 +10,8 @@ export default {
   decorators: [withKnobs]
 };
 
-export const Full = () => `
-  <dmp-slottedaddresscard phonenumberIslink={true} lat="${text('lat', "32.1479602")}" lon="${text('lon', "-85.0162703")}">
+export const Full = () => html`
+  <dmp-slottedaddresscard phonenumberislink="true" addressislink="true" lat="${text('lat', "32.1479602")}" lon="${text('lon', "-85.0162703")}">
     <div slot="image"><img src="Amy Edwards.jpg" /></div>
     <div slot="name">Amy Edwards</div>
     <div slot="address">1212 Omaha Dr, Montgomery, AL 36105, United States</div>
@@ -38,7 +39,7 @@ export const NameWithLocation = () => `
 `;
 
 export const AddressIsLink = () => `
-  <dmp-slottedaddresscard addressIsLink="true" lat="${text('lat', "32.1479602")}" lon="${text('lon', "-85.0162703")}">
+  <dmp-slottedaddresscard addressislink="true" lat="${text('lat', "32.1479602")}" lon="${text('lon', "-85.0162703")}">
     <div slot="name">Amy Edwards</div>
     <div slot="address">1212 Omaha Dr, Montgomery, AL 36105, United States</div>
   </dmp-slottedaddresscard>
