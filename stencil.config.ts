@@ -38,6 +38,9 @@ export const config: Config = {
           src: "*.html"
         },
         {
+          src: "*.xml"
+        },
+        {
           src: "sitemap.txt"
         }
       ],
