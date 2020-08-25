@@ -41,7 +41,7 @@ export const config: Config = {
           src: "*.xml"
         },
         {
-          src: "sitemap.txt"
+          src: "*.txt"
         }
       ],
     },

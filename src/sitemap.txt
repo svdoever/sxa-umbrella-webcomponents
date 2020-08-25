@@ -1,6 +1,6 @@
 https://mango-river-020e4d803.azurestaticapps.net/index.html
 https://mango-river-020e4d803.azurestaticapps.net/index-attributes.html
 https://mango-river-020e4d803.azurestaticapps.net/index-slotted.html
-https://mango-river-020e4d803.azurestaticapps.net/react
-https://mango-river-020e4d803.azurestaticapps.net/vue
-https://mango-river-020e4d803.azurestaticapps.net/storybook
+https://mango-river-020e4d803.azurestaticapps.net/react/index.html
+https://mango-river-020e4d803.azurestaticapps.net/vue/index.html
+https://mango-river-020e4d803.azurestaticapps.net/storybook/index.html
