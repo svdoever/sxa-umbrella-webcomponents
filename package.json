@@ -1,6 +1,6 @@
 {
   "name": "sxa-umbrella-webcomponents",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "SXA Umbrella web components",
   "keywords": [
     "Sitecore",
@@ -8,6 +8,11 @@
     "WebComponents"
   ],
   "license": "MIT",
+  "homepage": "https://github.com/svdoever/sxa-umbrella-webcomponents#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/svdoever/sxa-umbrella-webcomponents.git"
+  },
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "es2015": "dist/esm/index.mjs",

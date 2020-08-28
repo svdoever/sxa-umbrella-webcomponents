@@ -26,7 +26,18 @@ Components can be loaded directly through https://unpkg.com by adding the follow
 Replace `@0.0.1` with the latest version.
 
 ## How to use
-See `package.json` for the different script commands to build the different versions.
+See `package.json` for the different script commands available:
+
+| command | description |
+| - | - |
+| start | do a build of the Stencil web components in watch mode, runs at default port http://localhost:3333 |
+| start:legacy | as above, but with support for Internet Support 11 |
+| build | build the Stencil web components |
+| test | execute the Stencil web component tests |
+| test.watch | execute the Stencil web component tests in watch mode |
+| generate | scaffold a new Stencil web component |
+| storybook | start build of the Stencil web components in watch mode, and Storybook in watch mode |
+| build:all | build Stencil web components, React and Vue examples and Storybook, used from build server |
 
 ## Blog posts
 
