@@ -18,12 +18,12 @@ The components are published to NPM as well as the package [sxa-umbrella-webcomp
 Components can be loaded directly through https://unpkg.com by adding the following lines to the head section of your HTML page:
 
 ```html
-<link rel="stylesheet" href="https://unpkg.com/sxa-umbrella-webcomponents@0.0.1/dist/sxa-umbrella-webcomponents/sxa-umbrella-webcomponents.css" />
-<script type="module" src="https://unpkg.com/sxa-umbrella-webcomponents@0.0.1/dist/sxa-umbrella-webcomponents/sxa-umbrella-webcomponents.esm.js"></script>
-<script nomodule src="https://unpkg.com/sxa-umbrella-webcomponents@0.0.1/dist/sxa-umbrella-webcomponents/sxa-umbrella-webcomponents.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/sxa-umbrella-webcomponents@0.0.3/dist/sxa-umbrella-webcomponents/sxa-umbrella-webcomponents.css" />
+<script type="module" src="https://unpkg.com/sxa-umbrella-webcomponents@0.0.3/dist/sxa-umbrella-webcomponents/sxa-umbrella-webcomponents.esm.js"></script>
+<script nomodule src="https://unpkg.com/sxa-umbrella-webcomponents@0.0.3/dist/sxa-umbrella-webcomponents/sxa-umbrella-webcomponents.js"></script>
 ```
 
-Replace `@0.0.1` with the latest version.
+Replace `@0.0.3` with the latest version.
 
 ## How to use
 See `package.json` for the different script commands available:
