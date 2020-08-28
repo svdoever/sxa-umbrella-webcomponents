@@ -31,7 +31,7 @@ export class DmpAddresscard implements ComponentInterface {
 
   @Element() hostElement: HTMLStencilElement;
 
-  private handleLocationClick = () => {
+  private handleFlipClick = () => {
     this.showLocation = !this.showLocation;
     console.log("test123", this.showLocation);
   };
@@ -90,7 +90,7 @@ export class DmpAddresscard implements ComponentInterface {
           <div class="mt-4">
               <button
                 class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-                onClick={this.handleLocationClick}
+                onClick={this.handleFlipClick}
               >
                 Show location
               </button>
@@ -107,7 +107,7 @@ export class DmpAddresscard implements ComponentInterface {
 
               <button
                 class="mt-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-                onClick={this.handleLocationClick}
+                onClick={this.handleFlipClick}
               >
                 Show card
               </button>

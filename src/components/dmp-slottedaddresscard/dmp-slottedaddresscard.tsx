@@ -27,9 +27,8 @@ export class DmpSlottedaddresscard implements ComponentInterface {
     this.hasImage = !!this.hostElement.querySelector('[slot="image"]');
   }
 
-  private handleLocationClick = () => {
+  private handleFlipClick = () => {
     this.showLocation = !this.showLocation;
-    console.log('test123', this.showLocation);
   };
 
   private handleAddressClick = () => {
@@ -40,6 +39,8 @@ export class DmpSlottedaddresscard implements ComponentInterface {
   };
 
   render() {
+    let name = (this.hostElement.querySelector('[slot="name"]') as HTMLElement)?.innerHTML;
+    
     return (
       <Host>
         <div class="block bg-white rounded-lg shadow-xl p-6 overflow-hidden m-2">
@@ -88,7 +89,7 @@ export class DmpSlottedaddresscard implements ComponentInterface {
               <div class="mt-4">
                 <button
                   class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-                  onClick={this.handleLocationClick}
+                  onClick={this.handleFlipClick}
                 >
                   Show location
                 </button>
@@ -97,7 +98,7 @@ export class DmpSlottedaddresscard implements ComponentInterface {
           </div>
           {this.showLocation && this.lat && this.lon && (
             <div class="text-center md:text-left">
-              <h2 class="text-2xl">Location</h2>
+              <h2 class="text-2xl">{name? `Location of ${name}` : 'Location'}</h2>
               <img
                 height={200}
                 width={400}
@@ -106,7 +107,7 @@ export class DmpSlottedaddresscard implements ComponentInterface {
 
               <button
                 class="mt-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-                onClick={this.handleLocationClick}
+                onClick={this.handleFlipClick}
               >
                 Show card
               </button>
